@@ -10,7 +10,7 @@ export const TodoInfo = ({ todo, user }) => {
     <article className={classNames}>
       <h2 className="TodoInfo__title">{todo.title}</h2>
 
-      {user && <UserInfo key={user.id} user={user} />}
+      {user && <UserInfo user={user} />}
     </article>
   );
 };
