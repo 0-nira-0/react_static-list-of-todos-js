@@ -1,7 +1,7 @@
 import className from 'classnames';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-export const TodoInfo = ({ todo, user }) => {
+export const TodoInfo = ({ todo }) => {
   const classNames = className('TodoInfo', {
     'TodoInfo--completed': todo.completed,
   });
@@ -10,7 +10,7 @@ export const TodoInfo = ({ todo, user }) => {
     <article className={classNames}>
       <h2 className="TodoInfo__title">{todo.title}</h2>
 
-      {user && <UserInfo user={user} />}
+      {todo.user && <UserInfo user={todo.user} />}
     </article>
   );
 };
